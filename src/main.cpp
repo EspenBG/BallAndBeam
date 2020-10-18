@@ -1,25 +1,17 @@
 #include <Arduino.h>
-#include <pixy.h>
-
-//void setup() {
-//// write your initialization code here
-//pinMode(13, OUTPUT);
-//}
-//
-//void loop() {
-//// write your code here
-//digitalWrite(13, HIGH);
-//delay(1000);
-//digitalWrite(13, LOW);
-//delay(1000);
-//}
-
-
-#include <SPI.h>
 #include <Pixy.h>
+#include <SPI.h>
+#include <PID_v1.h>
+#include <Servo.h>
+
+int y_limit[] = {0, 200};
+int x_limit[] = {0, 340};
 
 // This is the main Pixy object
 Pixy pixy;
+
+// This is the servo object
+Servo servo;
 
 void setup()
 {
@@ -48,21 +40,36 @@ void loop()
         // frame would bog down the Arduino
         if (i%50==0)
         {
+            int largestObject = 0;
+            int areaLargestObject = 0;
+
             sprintf(buf, "Detected %d:\n", blocks);
             Serial.print(buf);
             for (j=0; j<blocks; j++)
             {
                 // Check and find the largest object of signature 1
+                if (y_limit[0] < pixy.blocks[j].y < y_limit[1] && x_limit[0] < pixy.blocks[j].x) {
+                    int areaObject = pixy.blocks[j].height * pixy.blocks[j].width;
+                    Serial.println(areaObject);
+                    if (areaLargestObject >= areaObject) {
+                        areaLargestObject = areaObject;
+                        largestObject = j;
+                    }
 
+
+                }
                 // Check for the position of the object
 
                 // Transform the objects coordinates to meters and print the result
 
+//
+//                sprintf(buf, "  block %d: ", j);
+//                Serial.print(buf);
+//                pixy.blocks[j].print();
+                pixy.blocks[largestObject].print();
 
-                sprintf(buf, "  block %d: ", j);
-                Serial.print(buf);
-                pixy.blocks[j].print();
             }
+
         }
     }
 
