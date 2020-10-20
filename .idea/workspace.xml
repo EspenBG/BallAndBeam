@@ -32,8 +32,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60cfe32f-f5f4-4716-9390-f601218283eb" name="Default Changelist" comment="Function for getting the position of the object&#10;-Read the position from the pixy cam&#10;-use the position of the biggest object&#10;-Also added a servo test for testing of the servo motor">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -71,12 +73,12 @@
     </key>
   </component>
   <component name="RunManager" selected="PlatformIO.PlatformIO Upload">
-    <configuration name="Z_DUMMY_TARGET" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BallAndBeam" TARGET_NAME="Z_DUMMY_TARGET" CONFIG_NAME="uno" RUN_TARGET_PROJECT_NAME="BallAndBeam" RUN_TARGET_NAME="Z_DUMMY_TARGET">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Z_DUMMY_TARGET" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BallAndBeam" TARGET_NAME="Z_DUMMY_TARGET" CONFIG_NAME="uno" RUN_TARGET_PROJECT_NAME="BallAndBeam" RUN_TARGET_NAME="Z_DUMMY_TARGET">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -112,7 +114,8 @@
       <updated>1602955107643</updated>
       <workItem from="1602955108732" duration="2613000" />
       <workItem from="1603020181354" duration="11333000" />
-      <workItem from="1603131245894" duration="3651000" />
+      <workItem from="1603131245894" duration="3911000" />
+      <workItem from="1603192818088" duration="1422000" />
     </task>
     <task id="LOCAL−00001" summary="Added library for teh pixy cam and some test programs">
       <created>1602970155139</created>
@@ -139,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603189239211</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added a readme file. There is no content in the file.">
+      <created>1603192420967</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603192420967</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +171,8 @@
     <MESSAGE value="Added library for teh pixy cam and some test programs" />
     <MESSAGE value="Added library for Servo and PID&#10;-Started on the program to find the position of the object" />
     <MESSAGE value="Function for getting the position of the object&#10;-Read the position from the pixy cam&#10;-use the position of the biggest object&#10;-Also added a servo test for testing of the servo motor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Function for getting the position of the object&#10;-Read the position from the pixy cam&#10;-use the position of the biggest object&#10;-Also added a servo test for testing of the servo motor" />
+    <MESSAGE value="Added a readme file. There is no content in the file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a readme file. There is no content in the file." />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="144" key="#com.intellij.ide.util.MemberChooser" timestamp="1603189002256">
@@ -180,30 +191,39 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="772" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1602955137966" />
-    <state width="1398" height="204" key="GridCell.Tab.0.bottom" timestamp="1603131357416">
+    <state width="1398" height="204" key="GridCell.Tab.0.bottom" timestamp="1603192844358">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1603044035145" />
-    <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1603131357416" />
-    <state width="1398" height="204" key="GridCell.Tab.0.center" timestamp="1603131357414">
+    <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1603192844358" />
+    <state width="1398" height="204" key="GridCell.Tab.0.center" timestamp="1603192844357">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1603044035145" />
-    <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1603131357414" />
-    <state width="1398" height="204" key="GridCell.Tab.0.left" timestamp="1603131357414">
+    <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1603192844357" />
+    <state width="1398" height="204" key="GridCell.Tab.0.left" timestamp="1603192844356">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1603044035145" />
-    <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1603131357414" />
-    <state width="1398" height="204" key="GridCell.Tab.0.right" timestamp="1603131357415">
+    <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1603192844356" />
+    <state width="1398" height="204" key="GridCell.Tab.0.right" timestamp="1603192844357">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1603044035145" />
-    <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1603131357415" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602970162344">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1603192844357" />
+    <state x="221" y="60" key="SettingsEditor" timestamp="1603193213680">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="221" y="60" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1603193213680" />
+    <state x="414" y="217" key="Vcs.Push.Dialog.v2" timestamp="1603192428290">
+      <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1602970162344" />
+    <state x="414" y="217" key="Vcs.Push.Dialog.v2/0.23.1440.797@0.23.1440.797" timestamp="1603192428290" />
+    <state x="518" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603192823243">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="518" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.797@0.23.1440.797" timestamp="1603192823243" />
     <state x="442" y="218" width="555" height="402" key="refactoring.ChangeSignatureDialog" timestamp="1603131643564">
       <screen x="0" y="23" width="1440" height="797" />
     </state>

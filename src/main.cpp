@@ -8,7 +8,7 @@
 int y_limit[] = {0, 200};
 int x_limit[] = {0, 340}; // Acts as the linear approximation for the ball
 int servoPin = 9;
-double setpointPid = 30; // set to a value between 0 and 255
+double setPointPid = 30; // set to a value between 0 and 255
 double inputPid;
 double outputPid;
 
@@ -24,9 +24,9 @@ Pixy pixy;
 Servo myServo;
 
 // This is the PID object
-PID pidController(&inputPid, &outputPid, &setpointPid, Kp, Ki, Kd, DIRECT);
+PID pidController(&inputPid, &outputPid, &setPointPid, Kp, Ki, Kd, DIRECT);
 
-long getPosition(int i, int j, uint16_t blocks);
+long getPosition(uint16_t blocks);
 
 void setup() {
     Serial.begin(9600);
@@ -51,7 +51,7 @@ void loop() {
     // grab blocks!
     long objectPosition = pixy.getBlocks();
 /* Remove line after servo test
- *
+
     // Find the position of the largest object in the specified range
     if (blocks) {
         getPosition(blocks);
@@ -62,16 +62,18 @@ void loop() {
         long inputValue = map(objectPosition, x_limit[0], x_limit[1], 0, 255);
         inputPid = (double) inputValue;
         pidController.Compute();
-        long servoSetpoint = map(outputPid, 0, 100, 10, 170);
-        myServo.write(servoSetpoint);
+        long servoSetPoint = map(outputPid, 0, 100, 10, 170);
+        myServo.write(servoSetPoint);
     }
     */ //Remove line after servo test
 }
 
+/**
+ * @brief Finds the center position of the largest object for the pixy blocks
+ * @param blocks Give the pixy blocks to be analysed
+ * @return xPosition long value for the center of the object
+ */
 long getPosition(uint16_t blocks) {
-    /*
-     *
-     */
     int j;
     int largestObject = 0;
     int areaLargestObject = 0;
@@ -98,5 +100,6 @@ long getPosition(uint16_t blocks) {
 
         //if (i = 30) { pixy.blocks[largestObject].print(); }
     }
-    return pixy.blocks[largestObject].x;
+    long xPosition = pixy.blocks[largestObject].x;
+    return xPosition;
 }
