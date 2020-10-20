@@ -31,11 +31,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60cfe32f-f5f4-4716-9390-f601218283eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" afterDir="false" />
+    <list default="true" id="60cfe32f-f5f4-4716-9390-f601218283eb" name="Default Changelist" comment="Function for getting the position of the object&#10;-Read the position from the pixy cam&#10;-use the position of the biggest object&#10;-Also added a servo test for testing of the servo motor">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +112,7 @@
       <updated>1602955107643</updated>
       <workItem from="1602955108732" duration="2613000" />
       <workItem from="1603020181354" duration="11333000" />
-      <workItem from="1603131245894" duration="2755000" />
+      <workItem from="1603131245894" duration="3651000" />
     </task>
     <task id="LOCAL−00001" summary="Added library for teh pixy cam and some test programs">
       <created>1602970155139</created>
@@ -134,7 +132,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1603039406251</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Function for getting the position of the object&#10;-Read the position from the pixy cam&#10;-use the position of the biggest object&#10;-Also added a servo test for testing of the servo motor">
+      <created>1603189239211</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603189239211</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +160,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added library for teh pixy cam and some test programs" />
     <MESSAGE value="Added library for Servo and PID&#10;-Started on the program to find the position of the object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added library for Servo and PID&#10;-Started on the program to find the position of the object" />
+    <MESSAGE value="Function for getting the position of the object&#10;-Read the position from the pixy cam&#10;-use the position of the biggest object&#10;-Also added a servo test for testing of the servo motor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Function for getting the position of the object&#10;-Read the position from the pixy cam&#10;-use the position of the biggest object&#10;-Also added a servo test for testing of the servo motor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="144" key="#com.intellij.ide.util.MemberChooser" timestamp="1603189002256">
