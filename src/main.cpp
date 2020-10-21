@@ -5,8 +5,9 @@
 #include <Servo.h>
 
 // Constants
-int y_limit[] = {0, 200};
+int y_limit[] = {0, 110};
 int x_limit[] = {0, 340}; // Acts as the linear approximation for the ball
+int servoLimit[] = {151, 31};
 int servoPin = 9;
 double setPointPid = 30; // set to a value between 0 and 255
 double inputPid;
@@ -43,18 +44,18 @@ void setup() {
 void loop() {
     static int i = 0;
     // Servo test comment the underlying code after servo test
-    myServo.write(0);
-    delay(2000);
-    myServo.write(180);
-    delay(2000);
+    //myServo.write(151); //91 var center
+    //delay();
+    //myServo.write(180);
+    //delay(2000);
     uint16_t blocks;
     // grab blocks!
-    long objectPosition = pixy.getBlocks();
-/* Remove line after servo test
+    blocks = pixy.getBlocks();
 
     // Find the position of the largest object in the specified range
     if (blocks) {
-        getPosition(blocks);
+        Serial.println("OK");
+        long objectPosition = getPosition(blocks);
         i++;
 
         // Do we need to change the input value
@@ -62,10 +63,11 @@ void loop() {
         long inputValue = map(objectPosition, x_limit[0], x_limit[1], 0, 255);
         inputPid = (double) inputValue;
         pidController.Compute();
-        long servoSetPoint = map(outputPid, 0, 100, 10, 170);
+        Serial.println(outputPid);
+        long servoSetPoint = map(outputPid, 0, 255, servoLimit[0], servoLimit[1]);
+
         myServo.write(servoSetPoint);
     }
-    */ //Remove line after servo test
 }
 
 /**
