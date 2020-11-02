@@ -6,17 +6,17 @@
 
 // Constants
 int y_limit[] = {0, 110};
-int x_limit[] = {0, 340}; // Acts as the linear approximation for the ball
+int x_limit[] = {40, 300}; // Acts as the linear approximation for the ball
 int servoLimit[] = {151, 31};
 int servoPin = 9;
-double setPointPid = 30; // set to a value between 0 and 255
+double setPointPid = 150; // set to a value between 0 and 255
 double inputPid;
 double outputPid;
 
 
-double Kp = 1;
-double Ki = 0;
-double Kd = 0;
+double Kp = 2.125; //Oscillation at 2.125 K_P = 1/2 K_p@oscillation // For 10ms: 1.0625 // For 20ms: 2.125
+double Ti = 0.3125;//1.25; // For 10ms:0.625 //For 20ms: 0.3125
+double Td = 0.475; // For 10ms:0.08 //For 20ms: 0.475
 
 // This is the main Pixy object
 Pixy pixy;
@@ -25,7 +25,7 @@ Pixy pixy;
 Servo myServo;
 
 // This is the PID object
-PID pidController(&inputPid, &outputPid, &setPointPid, Kp, Ki, Kd, DIRECT);
+PID pidController(&inputPid, &outputPid, &setPointPid, Kp, Ti, Td, DIRECT);
 
 long getPosition(uint16_t blocks);
 
@@ -36,12 +36,13 @@ void setup() {
     pixy.init();
     myServo.attach(servoPin);
     pidController.SetMode(AUTOMATIC); // Turns the PID controller on
-    pidController.SetSampleTime(100); // The delay between calculations of the PID controller
+    pidController.SetSampleTime(20); // The delay between calculations of the PID controller
 }
 
 
 
 void loop() {
+    //delay(100);
     static int i = 0;
     // Servo test comment the underlying code after servo test
     //myServo.write(151); //91 var center
@@ -54,19 +55,31 @@ void loop() {
 
     // Find the position of the largest object in the specified range
     if (blocks) {
-        Serial.println("OK");
+        //Serial.println("At least one block was found");
+
         long objectPosition = getPosition(blocks);
         i++;
+        //Serial.print("The position of the biggest object: ");
+        //Serial.println(objectPosition);
 
         // Do we need to change the input value
         // linearizes the position to a position between 0 and 255
         long inputValue = map(objectPosition, x_limit[0], x_limit[1], 0, 255);
+
         inputPid = (double) inputValue;
+//        Serial.print("The input to PID: ");
+//        Serial.println(inputValue);
+//        Serial.print("Setpoint: ");
+//        Serial.println(setPointPid);
+
         pidController.Compute();
-        Serial.println(outputPid);
+
+        //Serial.println(outputPid);
         long servoSetPoint = map(outputPid, 0, 255, servoLimit[0], servoLimit[1]);
 
         myServo.write(servoSetPoint);
+        //Serial.print("Servo position: ");
+        //Serial.println(servoSetPoint);
     }
 }
 
