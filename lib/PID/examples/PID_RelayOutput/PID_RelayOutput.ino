@@ -23,8 +23,8 @@
 double Setpoint, Input, Output;
 
 //Specify the links and initial tuning parameters
-double Kp=2, Ti=5, Kd=1;
-PID myPID(&Input, &Output, &Setpoint, Kp, Ti, Kd, DIRECT);
+double Kp=2, Ki=5, Kd=1;
+PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
 
 int WindowSize = 5000;
 unsigned long windowStartTime;

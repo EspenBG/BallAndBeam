@@ -15,8 +15,8 @@ double outputPid;
 
 
 double Kp = 2.125; //Oscillation at 2.125 K_P = 1/2 K_p@oscillation // For 10ms: 1.0625 // For 20ms: 2.125
-double Ti = 0.3125;//1.25; // For 10ms:0.625 //For 20ms: 0.3125
-double Td = 0.475; // For 10ms:0.08 //For 20ms: 0.475
+double Ki = 0.3125;//1.25; // For 10ms:0.625 //For 20ms: 0.3125
+double Kd = 0.475; // For 10ms:0.08 //For 20ms: 0.475
 
 // This is the main Pixy object
 Pixy pixy;
@@ -25,7 +25,7 @@ Pixy pixy;
 Servo myServo;
 
 // This is the PID object
-PID pidController(&inputPid, &outputPid, &setPointPid, Kp, Ti, Td, DIRECT);
+PID pidController(&inputPid, &outputPid, &setPointPid, Kp, Ki, Kd, DIRECT);
 
 long getPosition(uint16_t blocks);
 

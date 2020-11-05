@@ -31,8 +31,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60cfe32f-f5f4-4716-9390-f601218283eb" name="Default Changelist" comment="Testing of the program after setting the servo range">
-      <change beforePath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" afterDir="false" />
+    <list default="true" id="60cfe32f-f5f4-4716-9390-f601218283eb" name="Default Changelist" comment="Program after setting of PID parameters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/PID/examples/PID_Basic/PID_Basic.ino" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PID/examples/PID_Basic/PID_Basic.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/PID/examples/PID_RelayOutput/PID_RelayOutput.ino" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PID/examples/PID_RelayOutput/PID_RelayOutput.ino" afterDir="false" />
@@ -114,7 +113,7 @@
       <workItem from="1603131245894" duration="3911000" />
       <workItem from="1603192818088" duration="6053000" />
       <workItem from="1603789465276" duration="6809000" />
-      <workItem from="1604304759337" duration="59000" />
+      <workItem from="1604304759337" duration="2932000" />
     </task>
     <task id="LOCAL−00001" summary="Added library for teh pixy cam and some test programs">
       <created>1602970155139</created>
@@ -162,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603274731201</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Program after setting of PID parameters">
+      <created>1604304880508</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604304880508</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +193,8 @@
     <MESSAGE value="Added a readme file. There is no content in the file." />
     <MESSAGE value="Added som documentation for getPosition function&#10;-renamed som variables" />
     <MESSAGE value="Testing of the program after setting the servo range" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing of the program after setting the servo range" />
+    <MESSAGE value="Program after setting of PID parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Program after setting of PID parameters" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="144" key="#com.intellij.ide.util.MemberChooser" timestamp="1603189002256">
